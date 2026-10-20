@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咻狗 ShowDog Studio - 你的毛孩陪伴好朋友</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Noto Sans TC & Fredoka -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            50: '#F4F7F4',
+                            100: '#E3ECE3',
+                            200: '#C7D9C7',
+                            300: '#A3C1A3',
+                            400: '#7A9F7A',
+                            500: '#5A805B',
+                            600: '#436444',
+                            700: '#354F36',
+                            800: '#2A3F2A',
+                            900: '#1D2B1E',
+                        },
+                        sage: {
+                            50: '#F6F8F5',
+                            100: '#E9EFE8',
+                            200: '#D5E0D3',
+                            300: '#B8CBB5',
+                            400: '#94AE90',
+                            500: '#72906E',
+                            600: '#577254',
+                            700: '#445A41',
+                            800: '#364734',
+                            900: '#2B3929',
+                        },
+                        bark: {
+                            100: '#F5F0EB',
+                            200: '#E4D8CC',
+                            500: '#8C7462',
+                            800: '#4A3B32',
+                        },
+                        warmWarmth: '#F7FAF6'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        cute: ['"Fredoka"', 'cursive', '"Noto Sans TC"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F7FAF6;
+            color: #2A3F2A;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .bg-pattern {
+            background-image: radial-gradient(#94AE90 0.85px, transparent 0.85px);
+            background-size: 18px 18px;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between relative selection:bg-sage-200 selection:text-forest-900">
+
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 bg-pattern pointer-events-none -z-10"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-forest-100 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <span class="text-3xl text-forest-500"><i class="fa-solid fa-tree"></i></span>
+                    <span class="font-cute text-2xl font-bold text-forest-800 tracking-wide">咻狗 <span class="text-xs text-forest-500 font-normal">ShowDog Studio</span></span>
+                </div>
+                <div class="hidden md:flex space-x-6 text-sm font-medium text-forest-700">
+                    <a href="#services" class="hover:text-forest-500 transition-colors">寶貝服務</a>
+                    <a href="#about" class="hover:text-forest-500 transition-colors">關於咻狗</a>
+                    <a href="#reviews" class="hover:text-forest-500 transition-colors">家長好評</a>
+                    <a href="#contact" class="hover:text-forest-500 transition-colors">預約聊聊</a>
+                </div>
+                <a href="#booking" class="bg-forest-600 hover:bg-forest-700 text-white text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:shadow transition-all duration-200 flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i> 快速預約
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-5 text-center md:text-left">
+                    <div class="inline-block bg-forest-100 text-forest-800 text-xs font-medium px-3.5 py-1.5 rounded-full border border-forest-200 shadow-sm">
+                        🌿 像在大自然裡散步一樣放鬆 ‧ 小型犬專屬森林小屋
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-forest-900 leading-tight">
+                        下班別著急，<br>
+                        毛孩在<span class="text-forest-600 underline decoration-forest-300 decoration-wavy underline-offset-8">咻狗</span>被照顧得超好！
+                    </h1>
+                    <p class="text-forest-700 text-base leading-relaxed">
+                        嗨！今天上班辛苦啦～🐶<br>
+                        是不是又在擔心家裡的小寶貝有沒有乖乖吃飯、會不會太無聊？<br>
+                        把小型寶貝交給我們，安心上班，下班接回一隻香噴噴、心情超好的開心狗狗！
+                    </p>
+                    <div class="pt-2 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                        <a href="#booking" class="bg-forest-600 hover:bg-forest-700 text-white font-medium px-6 py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-center">
+                            預約今天/本週安親
+                        </a>
+                        <a href="#services" class="bg-white hover:bg-forest-50 text-forest-800 border border-forest-200 font-medium px-6 py-3 rounded-2xl transition-all text-center">
+                            看更多服務項目
+                        </a>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="w-72 h-72 sm:w-80 sm:h-80 bg-forest-200/70 rounded-full absolute -z-10 blur-2xl opacity-70 top-4"></div>
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=800" 
+                         alt="可愛的小狗" 
+                         class="rounded-3xl shadow-xl border-4 border-white object-cover w-full max-w-sm h-80 sm:h-96"
+                         onerror="this.src='https://placehold.co/400x500/C7D9C7/2A3F2A?text=ShowDog+Studio'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="bg-white/80 py-12 md:py-16 border-y border-forest-100 backdrop-blur-sm">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-forest-900">我們為寶貝準備的陪伴</h2>
+                    <p class="text-forest-600 text-sm mt-2">理解上班族家長的需求，時間彈性、貼心回報，像在大自然裡一樣舒心。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div class="bg-forest-50/60 p-6 rounded-2xl border border-forest-100 hover:border-forest-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-forest-200/80 rounded-xl flex items-center justify-center text-forest-700 text-xl mb-4 shadow-sm">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-forest-800 mb-2">日照日間安親</h3>
+                        <p class="text-forest-600 text-sm leading-relaxed mb-4">
+                            趕著上班別慌張！早上送來、下班帶回家。專屬小型犬互動空間，還有親切狗狗助教陪玩。
+                        </p>
+                        <span class="text-xs font-semibold text-forest-700 bg-forest-200/60 px-2.5 py-1 rounded-md">適合：通勤上班族爸媽</span>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-forest-50/60 p-6 rounded-2xl border border-forest-100 hover:border-forest-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-forest-200/80 rounded-xl flex items-center justify-center text-forest-700 text-xl mb-4 shadow-sm">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-forest-800 mb-2">溫柔洗澡洗香香</h3>
+                        <p class="text-forest-600 text-sm leading-relaxed mb-4">
+                            採用低敏植萃洗劑，全程不催促、不強迫。針對小型犬嬌嫩肌膚與毛髮設計，洗完蓬鬆舒服。
+                        </p>
+                        <span class="text-xs font-semibold text-forest-700 bg-forest-200/60 px-2.5 py-1 rounded-md">適合：定期美容保養</span>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-forest-50/60 p-6 rounded-2xl border border-forest-100 hover:border-forest-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-forest-200/80 rounded-xl flex items-center justify-center text-forest-700 text-xl mb-4 shadow-sm">
+                            <i class="fa-solid fa-camera-retro"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-forest-800 mb-2">即時照片影音回報</h3>
+                        <p class="text-forest-600 text-sm leading-relaxed mb-4">
+                            想念寶貝了嗎？我們會定期在 LINE 傳送毛孩的吃喝玩樂寫真，讓你上班療癒不擔心！
+                        </p>
+                        <span class="text-xs font-semibold text-forest-700 bg-forest-200/60 px-2.5 py-1 rounded-md">適合：焦慮型阿爸阿母</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atmosphere & Note Section -->
+        <section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+            <div class="bg-forest-100/60 rounded-3xl p-6 sm:p-10 border border-forest-200 flex flex-col md:flex-row items-center gap-8 shadow-sm">
+                <div class="md:w-1/2 space-y-4">
+                    <span class="text-forest-600 text-2xl"><i class="fa-solid fa-seedling"></i></span>
+                    <h2 class="text-2xl font-bold text-forest-900">為什麼小型犬爸媽特別愛來「咻狗」？</h2>
+                    <p class="text-forest-700 text-sm leading-relaxed">
+                        我們知道小型犬比較敏感、也比較黏人。在咻狗，我們不使用籠子硬關寶貝，而是提供安全無毒的地墊與軟綿綿的小窩。
+                    </p>
+                    <ul class="space-y-2.5 text-sm text-forest-800">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-forest-500"></i>
+                            全區小型犬分流，不擔心大狗衝撞嚇到
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-forest-500"></i>
+                            彈性接送時間，加班太晚只要提早說都好配合
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-forest-500"></i>
+                            每天定時消毒，乾淨無異味就像家裡一樣
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-3">
+                    <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&q=80&w=400" alt="狗狗快樂照" class="rounded-2xl shadow border-2 border-white object-cover h-40 w-full" onerror="this.src='https://placehold.co/300x200/C7D9C7/2A3F2A?text=Cute+Dog+1'">
+                    <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?auto=format&fit=crop&q=80&w=400" alt="狗狗休息" class="rounded-2xl shadow border-2 border-white object-cover h-40 w-full" onerror="this.src='https://placehold.co/300x200/C7D9C7/2A3F2A?text=Cute+Dog+2'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Simple Booking Box -->
+        <section id="booking" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 mb-12">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-forest-100">
+                <div class="text-center mb-6">
+                    <h2 class="text-2xl font-bold text-forest-900">預約安親 / 美容諮詢</h2>
+                    <p class="text-forest-600 text-sm mt-1">填個簡單資料，我們會在第一時間回覆您喔！</p>
+                </div>
+                <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-medium text-forest-800 mb-1">您的稱呼</label>
+                            <input type="text" required placeholder="例如：林小姐 / 狗狗爸爸" class="w-full px-4 py-2.5 rounded-xl border border-forest-200 focus:outline-none focus:ring-2 focus:ring-forest-400 focus:border-transparent bg-forest-50/30 text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-forest-800 mb-1">寶貝的名字與品種</label>
+                            <input type="text" required placeholder="例如：圓圓 (貴賓)" class="w-full px-4 py-2.5 rounded-xl border border-forest-200 focus:outline-none focus:ring-2 focus:ring-forest-400 focus:border-transparent bg-forest-50/30 text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-forest-800 mb-1">希望預約服務</label>
+                        <select class="w-full px-4 py-2.5 rounded-xl border border-forest-200 focus:outline-none focus:ring-2 focus:ring-forest-400 focus:border-transparent bg-forest-50/30 text-sm">
+                            <option>日間安親 (上班族推薦)</option>
+                            <option>洗澡美容保養</option>
+                            <option>首次參觀與試安親</option>
+                            <option>其他問題諮詢</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-forest-800 mb-1">想要跟我們說的話（選填）</label>
+                        <textarea rows="3" placeholder="寶貝比較害羞、或是有特殊習慣都可以先告訴我們喔～" class="w-full px-4 py-2.5 rounded-xl border border-forest-200 focus:outline-none focus:ring-2 focus:ring-forest-400 focus:border-transparent bg-forest-50/30 text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-forest-600 hover:bg-forest-700 text-white font-medium py-3 rounded-xl shadow-sm transition-all text-sm">
+                        送信出給咻狗 🐾
+                    </button>
+                </form>
+                <!-- Custom Message Alert Box -->
+                <div id="messageBox" class="hidden mt-4 p-4 bg-forest-100 border border-forest-300 text-forest-900 rounded-xl text-center text-sm font-medium">
+                    訊息已經收到囉！我們會盡快透過 LINE 或電話跟你聯繫，記得帶寶貝來玩喔！🐶
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-forest-900 text-forest-200 py-8 border-t border-forest-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex justify-center items-center gap-2 text-xl font-bold font-cute text-forest-100">
+                <i class="fa-solid fa-tree text-forest-300"></i> 咻狗 ShowDog Studio
+            </div>
+            <p class="text-xs text-forest-300 max-w-md mx-auto leading-relaxed">
+                營業時間：週一至週五 08:00 - 20:00 (方便上班族彈性接送)<br>
+                地址：溫暖巷 88 號 1 樓｜聯絡電話：0912-345-678
+            </p>
+            <div class="pt-4 border-t border-forest-800 text-xs text-forest-400 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <div>© 2026 咻狗 ShowDog Studio. All rights reserved.</div>
+                <div class="font-medium text-forest-200 bg-forest-800/90 px-3 py-1 rounded-full border border-forest-700">
+                    製作：林俊傑
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const msgBox = document.getElementById('messageBox');
+            msgBox.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                msgBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
